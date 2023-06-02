@@ -259,8 +259,8 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-vim.api.nvim_set_keymap('n', 'j', 'jzz', { noremap = true, desc = "center screen on down scroll" })
-vim.api.nvim_set_keymap('n', 'k', 'kzz', { noremap = true, desc = "center screen on up scroll" })
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, desc = "center screen on down half page" })
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, desc = "center screen on up half page" })
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
