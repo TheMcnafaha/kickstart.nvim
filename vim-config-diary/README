@@ -1,0 +1,29 @@
+2023-06-02
+Mistakes were made. I now have two gits: the git containing my init file, and the git contining the greater kickstart repo.
+
+Now I have two init files because the kickstart repo also has its own init that I was meant to use (followed video instead of reading repo).
+
+I have two main solutions:
+	1) Copy the upper init into the kickstart init, and run two git instances 
+	2) Clear this dir and start over with kickstart, but replacing their init with my, and upper, init
+
+Pros of 1:
+	1. No deltion
+
+Cons of 1:
+	1. Two gits, and two inits
+
+Pros of 2:
+	1. the correct setup
+	2. one init
+
+Cons of 2:
+	1. I have to nuke this dir
+
+Because I'm pretty early into my vim life, day two in fact, I going with 2.
+
+Post Deletion World, circa 2023-06-02 02:38 
+	- old bug about lua config is gone
+	- actually ran on first try
+
+Now all i need is to replace this init with my init
