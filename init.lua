@@ -130,38 +130,14 @@ require('lazy').setup({
     },
   },
 
-  -- {
-  --   -- Theme inspired by Atom
-  --   'navarasu/onedark.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'onedark'
-  --   end,
-  -- },
-  -- 100$ dark theme, im trying this instead of my old VSCode Github Dark
-  {
-    'bluz71/vim-moonfly-colors',
-    priority = 1000,
-    name = "moonfly",
-    lazy = false,
-    config = function()
-      vim.cmd.colorscheme 'moonfly'
-    end
-  },
+  -- Theme related configs go here
+  require 'kickstart.plugins.theme',
 
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'moonfly',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
-  },
+
+
+  -- Status line related configs go here
+  require 'kickstart.plugins.statusline',
+
 
   {
     -- Add indentation guides even on blank lines
