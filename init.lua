@@ -130,13 +130,23 @@ require('lazy').setup({
     },
   },
 
+  -- {
+  --   -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
+  -- 100$ dark theme, im trying this instead of my old VSCode Github Dark
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    'bluz71/vim-moonfly-colors',
     priority = 1000,
+    name = "moonfly",
+    lazy = false,
     config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+      vim.cmd.colorscheme 'moonfly'
+    end
   },
 
   {
@@ -146,7 +156,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'moonfly',
         component_separators = '|',
         section_separators = '',
       },
