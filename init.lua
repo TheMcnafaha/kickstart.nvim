@@ -133,11 +133,8 @@ require('lazy').setup({
   -- Theme related configs go here
   require 'kickstart.plugins.theme',
 
-
-
   -- Status line related configs go here
   require 'kickstart.plugins.statusline',
-
 
   {
     -- Add indentation guides even on blank lines
@@ -190,7 +187,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
