@@ -259,6 +259,14 @@ vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, desc = "cente
 vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, desc = "center screen on up half page" })
 vim.api.nvim_set_keymap('n', 'n', 'nzzzv', { desc = "go foward a  search while keeping cursor centered" })
 vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { desc = "go bakwards a  search while keeping cursor centered" })
+-- get lsp fn parms on insert mode
+vim.keymap.set('i', '<c-k>', function() vim.lsp.buf.signature_help() end, { buffer = true })
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers['signature_help'], {
+    border = 'single',
+    close_events = { "BufHidden", "InsertCharPre", "CursorMoved" },
+  }
+)
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
