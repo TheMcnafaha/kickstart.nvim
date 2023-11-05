@@ -513,5 +513,14 @@ cmp.setup {
   },
 }
 
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx',
+  },
+  filename = {},
+  pattern = {},
+})
+local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+ft_to_parser.mdx = "markdown"
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2
