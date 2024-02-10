@@ -11,5 +11,8 @@ vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { desc = "go bakwards a  search while
 -- not remap
 vim.opt.scrolloff = 15
 vim.wo.relativenumber = true
+-- jt stuff
+vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>source ~/.config/nvim/lua/custom/my-snippets.lua<CR>",
+	{ desc = "resouece snippets" })
 -- my stuff
 vim.keymap.set('n', '<leader>l', '<Cmd>Neotree toggle<CR>', { desc = 'toggle file tree' })

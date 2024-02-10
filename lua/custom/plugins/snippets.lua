@@ -27,6 +27,12 @@ return {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
 	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	ls.add_snippets("all", {
+		s("ternary", {
+			-- equivalent to "${1:cond} ? ${2:then} : ${3:else}"
+			i(1, "cond"), t(" ? "), i(2, "then"), t(" : "), i(3, "else")
+		})
+	}),
 	config = function()
 		require("luasnip.loaders.from_vscode").load({ paths = { "~/code-snippets/qwik.json" } })
 	end
