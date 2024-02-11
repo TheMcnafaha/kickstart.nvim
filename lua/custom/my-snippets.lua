@@ -18,6 +18,11 @@ local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
+vim.keymap.set("i", "c-n", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end)
 -- ls.add_snippets("lua",
 -- 	{ s("lf"),
 -- 		{ "local $1 = function($2)\n $0\nend" } }
@@ -63,5 +68,9 @@ ls.add_snippets("lua", {
 	})),
 })
 ls.add_snippets("lua", {
-	s("magic", t("im a a wirxard"))
+	s("ls", fmt([[
+local {} = function({})
+{}
+end
+]], { i(1), i(2), i(3) }))
 })
