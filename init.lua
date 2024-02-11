@@ -659,7 +659,7 @@ cmp.setup {
     },
     ['<C-l>'] = cmp.mapping(function(fallback)
       if luasnip.expand_or_locally_jumpable() then
-        luasnip.expand_or_jump()
+        luasnip.jump(1)
       else
         fallback()
       end
