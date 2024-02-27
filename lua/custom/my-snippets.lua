@@ -18,11 +18,11 @@ local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
-vim.keymap.set("i", "c-n", function()
+vim.keymap.set("i", "<C-n>", function()
 	if ls.choice_active() then
 		ls.change_choice(1)
 	end
-end)
+end, { desc = "change snippet choice" })
 -- ls.add_snippets("lua",
 -- 	{ s("lf"),
 -- 		{ "local $1 = function($2)\n $0\nend" } }
@@ -68,9 +68,35 @@ ls.add_snippets("lua", {
 	})),
 })
 ls.add_snippets("lua", {
-	s("ls", fmt([[
+	s("lf", fmt([[
+-- Defined in $TM_FILENAME
 local {} = function({})
 {}
 end
 ]], { i(1), i(2), i(3) }))
 })
+
+ls.add_snippets("lua", {
+	s("muti", fmt([[
+pick: {}
+{}
+]], {
+		c(1, { ls.text_node("me "), ls.text_node("other me") }), i(2, "great choice!!!")
+	}))
+})
+ls.add_snippets("lua", {
+	s("ct", f(function()
+		return os.date "%D - %H:%M"
+	end))
+})
+ls.add_snippets("lua", {
+	s("req", fmt([[
+local {} = require "{}"
+]], {
+		f(function(import_strg)
+			local parts = vim.split(import_strg[1][1], ".", { plain = true })
+			return parts[#parts] or ""
+		end, { 1 }), i(1)
+	}))
+})
+require "custom.qsnippets"

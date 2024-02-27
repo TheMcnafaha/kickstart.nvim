@@ -58,6 +58,12 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   }
 end
+if vim.g.vscode then
+  -- mininal setup when vsdoing
+  return
+else
+  -- ordinary Neovim
+end
 vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure plugins ]]
@@ -117,10 +123,8 @@ require('lazy').setup({
       -- Adds LSP completion capabilities
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
-
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
-      '~/code-snippets/vscode-qwik-snippets/'
     },
   },
 
