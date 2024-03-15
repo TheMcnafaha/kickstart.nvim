@@ -18,34 +18,28 @@ local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
--- qwik component snippets (tsx)
+ls.filetype_extend("ts", { "tsx" })
+ls.filetype_extend("tsx", { "lua" })
 local strg = vim.api.nvim_buf_get_name(0)
+
 local favSn = s("deftype", fmt([[
 <{}>
 ]], {
 	i(1)
 }))
 
-ls.add_snippets("tsx", {
-	s("qsignal", fmta([[
-const <var> = useSignal<type>(<initial>)
-]], {
-		var = i(1),
-		type = i(2),
-		initial = i(3)
-	}))
-})
 
-ls.add_snippets("tsx", {
-	s("qtrack", fmta([[
-		useTask$(({{ track }})=>>{{
-			track(()=>><signal>)
-			<finish>
-		}})
+ls.add_snippets("ts", {
+	s("afn", fmta([[
+		(<params>)<type>=>>{{ <body> }}
 		]],
-		{ signal = i(1), finish = i(0) }))
+		{ params = i(1), type = i(2), body = i(3) }))
 })
 ls.add_snippets("lua", { favSn
+})
+
+ls.add_snippets("lua", {
+	s("godly", t("im test"))
 })
 
 return strg
