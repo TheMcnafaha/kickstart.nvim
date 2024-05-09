@@ -696,7 +696,10 @@ cmp.setup {
     { name = 'path' },
   },
 }
-
+P = function(v)
+  print(vim.inspect(v))
+  return v
+end
 require("custom.remaps")
 require("custom.my-snippets")
 -- The line beneath this is called `modeline`. See `:help modeline`
