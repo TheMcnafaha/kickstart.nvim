@@ -25,10 +25,10 @@ local favSn = s("deftype", fmt([[
 ]], {
 	i(1)
 }))
-
-ls.add_snippets("tsx", {
+local tsx = 'typescriptreact'
+ls.add_snippets(tsx, {
 	s("qsignal", fmta([[
-const <var> = useSignal<type>(<initial>)
+const <var>Sig = useSignal<type>(<initial>)
 ]], {
 		var = i(1),
 		type = i(2),
@@ -36,7 +36,7 @@ const <var> = useSignal<type>(<initial>)
 	}))
 })
 
-ls.add_snippets("tsx", {
+ls.add_snippets(tsx, {
 	s("qtrack", fmta([[
 		useTask$(({{ track }})=>>{{
 			track(()=>><signal>)
@@ -45,7 +45,7 @@ ls.add_snippets("tsx", {
 		]],
 		{ signal = i(1), finish = i(0) }))
 })
-ls.add_snippets("lua", { favSn
-})
 
+-- get file type
+-- :lua print(vim.inspect(require("luasnip").get_snippet_filetypes()))
 return strg
