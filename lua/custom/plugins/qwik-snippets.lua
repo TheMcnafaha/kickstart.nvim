@@ -1,4 +1,3 @@
 return {
-	{ dir = "~/personal-projects/snippets-qwik/" }
+	{ dir = "~/personal-projects/qwik-snippets.nvim/" }
 }
-
