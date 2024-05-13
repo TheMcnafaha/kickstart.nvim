@@ -701,6 +701,7 @@ P = function(v)
   return v
 end
 require("custom.remaps")
+require("plenary")
 require("custom.my-snippets")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
