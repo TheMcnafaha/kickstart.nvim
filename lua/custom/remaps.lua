@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { desc = "go bakwards a  search while
 vim.opt.scrolloff = 15
 vim.wo.relativenumber = true
 -- jt stuff
-vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>source ~/.config/nvim/lua/custom/ts-snippets.lua<CR>",
+vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>source ~/personal-projects/snippets-qwik/plugin//qsnippets.lua<CR>",
         { desc = "resource snippets" })
 
 vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>source %<CR>",
