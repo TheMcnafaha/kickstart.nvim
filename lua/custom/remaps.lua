@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap('n', 'N', 'Nzzzv', { desc = "go bakwards a  search while
 vim.opt.scrolloff = 15
 vim.wo.relativenumber = true
 -- jt stuff
-vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>source ~/personal-projects/qwik-snippets.nvim/plugin/<CR>",
+vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>source ~/personal-projects/qwik-snippets.nvim/plugin/qsnippets.lua<CR>",
         { desc = "resource snippets" })
 
 vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>source %<CR>",
@@ -21,6 +21,8 @@ vim.api.nvim_set_keymap("n", "<leader>x", "<cmd>source %<CR>",
 vim.keymap.set('n', '<leader>l', '<Cmd>Neotree toggle<CR>', { desc = 'toggle file tree' })
 
 vim.keymap.set("n", "<leader>rt", "<Plug>PlenaryTestFile", { desc = "run test on file" })
+vim.keymap.set("i", "<c-u>", require("luasnip.extras.select_choice"), { desc = "luansip ui" })
+
 
 --[[ E5113: Error while calling lua chunk: /home/dev/.config/nvim/init.lua:363: module 'telescope' not found:
         no field package.preload['telescope']

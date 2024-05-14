@@ -640,6 +640,7 @@ local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {
   history = true,
+  updateevents = "TextChanged,TextChangedI"
 }
 
 cmp.setup {
@@ -685,6 +686,14 @@ cmp.setup {
     ['<C-k>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+
+    ['<C-o>'] = cmp.mapping(function(fallback)
+      if luasnip.choice_active() then
+        luasnip.change_choice(1)
       else
         fallback()
       end
