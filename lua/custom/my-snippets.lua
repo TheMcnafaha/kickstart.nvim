@@ -1,4 +1,5 @@
 require("custom.ts-snippets")
+require("qsnippets")
 local ls = require("luasnip")
 -- some shorthands...
 local s = ls.snippet
