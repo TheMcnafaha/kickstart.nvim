@@ -22,17 +22,3 @@ vim.keymap.set('n', '<leader>l', '<Cmd>Neotree toggle<CR>', { desc = 'toggle fil
 
 vim.keymap.set("n", "<leader>rt", "<Plug>PlenaryTestFile", { desc = "run test on file" })
 vim.keymap.set("i", "<c-u>", require("luasnip.extras.select_choice"), { desc = "luansip ui" })
-
-
---[[ E5113: Error while calling lua chunk: /home/dev/.config/nvim/init.lua:363: module 'telescope' not found:
-        no field package.preload['telescope']
-        no file './telescope.lua'
-        no file '/build/nvim/parts/nvim/build/.deps/usr/share/luajit-2.1/telescope.lua'
-        no file '/usr/local/share/lua/5.1/telescope.lua'
-        no file '/usr/local/share/lua/5.1/telescope/init.lua'
-        no file '/build/nvim/parts/nvim/build/.deps/usr/share/lua/5.1/telescope.lua'
-        no file '/build/nvim/parts/nvim/build/.deps/usr/share/lua/5.1/telescope/init.lua'
-        no file './telescope.so'
-        no file '/usr/local/lib/lua/5.1/telescope.so'
-        no file '/build/nvim/parts/nvim/build/.deps/usr/lib/lua/5.1/telescope.so'
-        no file '/usr/local/lib/lua/5.1/loadall.so' ]]
