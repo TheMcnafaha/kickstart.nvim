@@ -22,3 +22,6 @@ vim.keymap.set('n', '<leader>l', '<Cmd>Neotree toggle<CR>', { desc = 'toggle fil
 
 vim.keymap.set("n", "<leader>rt", "<Plug>PlenaryTestFile", { desc = "run test on file" })
 vim.keymap.set("i", "<c-u>", require("luasnip.extras.select_choice"), { desc = "luansip ui" })
+-- quick list
+vim.keymap.set("n", "<A-j>", "<Cmd>cnext<CR>zz", { desc = "Foward quick list" })
+vim.keymap.set("n", "<A-k>", "<Cmd>cprev<CR>zz", { desc = "Backward quick list" })
