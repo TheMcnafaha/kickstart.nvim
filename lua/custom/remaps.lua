@@ -25,3 +25,7 @@ vim.keymap.set("i", "<c-u>", require("luasnip.extras.select_choice"), { desc = "
 -- quick list
 vim.keymap.set("n", "<A-j>", "<Cmd>cnext<CR>zz", { desc = "Foward quick list" })
 vim.keymap.set("n", "<A-k>", "<Cmd>cprev<CR>zz", { desc = "Backward quick list" })
+
+-- fugitive
+--
+vim.keymap.set("n", "<leader>G", "<Cmd>Git<CR>", { desc = "Open fugitive" })
