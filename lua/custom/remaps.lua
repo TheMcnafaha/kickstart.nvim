@@ -27,5 +27,8 @@ vim.keymap.set("n", "<A-j>", "<Cmd>cnext<CR>zz", { desc = "Foward quick list" })
 vim.keymap.set("n", "<A-k>", "<Cmd>cprev<CR>zz", { desc = "Backward quick list" })
 
 -- fugitive
---
-vim.keymap.set("n", "<leader>G", "<Cmd>Git<CR>", { desc = "Open fugitive" })
+-- flog v2
+vim.keymap.set("n", "<leader>vb", " <c-w>v <c-w>l <Cmd> Flogsplit <CR> <c-w>j <c-w>c",
+        { desc = "Open git branch graph in half vertical" })
+
+vim.keymap.set("n", "<leader>fb", "<Cmd>Flog<CR>", { desc = "view git branch in full" })
