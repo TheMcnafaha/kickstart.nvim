@@ -21,11 +21,12 @@ Weekly IDENTITY Reflection:
 local daily_template = [[
 # %A %B %d %Y
 
-S.I.M.P.L.E goals:
+S.I.M.P.L.E goals v1:
 
-[ ] READ 100
+[ ] READ ATOMIC from 10am-12pm
 [ ] OPEN Anki
 [ ] DO 25 minutes
+[ ] LEAVE phone on desk
 
 Wrap ups:
 
