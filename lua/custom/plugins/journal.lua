@@ -1,14 +1,33 @@
-local template = [[
+local weekly_template = [[
 # %A %B %d %Y
 
-Yesterday's Review:
+Weekly GOAL Reflection:
 
-Today's Goals:
-1. 
-2. 
-3. 
+1) What turned out  good this week?
 
-Notes & Thoughts:
+2) What didn't work this week?
+
+3) What have I learned? 
+
+Weekly IDENTITY Reflection:
+
+1) What is the reason behind me existing the previous week?
+
+2) How did I upkeep my integrity this week?
+
+3) How I increase my goals for next week?
+
+]]
+local daily_template = [[
+# %A %B %d %Y
+
+S.I.M.P.L.E goals:
+
+[ ] READ 100
+[ ] OPEN Anki
+[ ] DO 25 minutes
+
+Wrap ups:
 
 ]]
 return {
@@ -31,12 +50,12 @@ return {
         entries = {
           day = {
             format = '%Y/%m-%B/daily/%d-%A', -- Format of the journal entry in the filesystem.
-            template = template, -- Optional. Template used when creating a new journal entry
+            template = daily_template, -- Optional. Template used when creating a new journal entry
             frequency = { day = 1 }, -- Optional. The frequency of the journal entry. Used for `:Journal next`, `:Journal -2` etc
           },
           week = {
             format = '%Y/%m-%B/weekly/week-%W',
-            template = '# Week %W %B %Y\n',
+            template = weekly_template,
             frequency = { day = 7 },
             date_modifier = 'monday', -- Optional. Date modifier applied before other modifier given to `:Journal`
           },
