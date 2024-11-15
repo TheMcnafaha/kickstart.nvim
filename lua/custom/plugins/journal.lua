@@ -21,15 +21,21 @@ Weekly IDENTITY Reflection:
 local daily_template = [[
 # %A %B %d %Y
 
-S.I.M.P.L.E goals v1.1:
+S.I.M.P.L.E goals v1.2:
 
 [ ] READ daily HUMANS & weekly ATOMIC from 10am-12pm
 [ ] OPEN Anki
-[ ] DO 25 minutes
+[ ] DO 25 minutes from 3:30pm-4:30pm
 [ ] LEAVE phone on desk
 
 Wrap ups:
 
+]]
+local one_month_challenge = [[
+
+30 DAY CHALLENGE: BECOME A CLEAN AND ORGANIZED PERSON
+
+[ ] Pick something up from the floor
 ]]
 return {
   'jakobkhansen/journal.nvim',
@@ -51,7 +57,7 @@ return {
         entries = {
           day = {
             format = '%Y/%m-%B/daily/%d-%A', -- Format of the journal entry in the filesystem.
-            template = daily_template, -- Optional. Template used when creating a new journal entry
+            template = daily_template .. one_month_challenge, -- Optional. Template used when creating a new journal entry
             frequency = { day = 1 }, -- Optional. The frequency of the journal entry. Used for `:Journal next`, `:Journal -2` etc
           },
           week = {
