@@ -1,3 +1,3 @@
 return {
-	{ dir = "~/tutorials/nvim/stackmaps/" },
+  { dir = '~/tutorials/nvim/integrated-test-results' },
 }
